@@ -1,13 +1,16 @@
-<div>
-    <img src="/logos/Take-off_v1-1-1.png" alt="logo" />
-</div>
+<a href="/" aria-label="Go to main page">
+    <img src="/logos/Take-off_v1-1-1.png" alt="Company's logo" />
+</a>
 
 <style>
-    div{
-        height: 100%;
+    a{
+        height: 3rem;
+        position: fixed;
+        top: var(--position-gap);
+        left: var(--position-gap);
     }
 
-    div>img{
+    a>img{
         display: block;
         aspect-ratio: 1.125/1;
         height: 100%;
