@@ -1,0 +1,71 @@
+.loader{
+    background-color: var(--black);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.loader__shadow{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    visibility: visible;
+    width: 0px;
+    height: 0px;
+    animation-name: shadow;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.loader__image{
+    display: block;
+    border-radius: var(--border-radius);
+    filter: grayscale(100%);
+}
+
+@media screen and (min-width: 500px){
+    .loader{
+        display: none;
+    }
+}
+
+@keyframes shadow {
+    0% {
+        box-shadow: 
+            20px 20px 90px 50px var(--accent), 
+            20px -20px 90px 50px var(--yellow),
+            -20px -20px 90px 50px var(--white),
+            -20px 20px 90px 50px var(--blue);
+    }
+
+    35% {
+        box-shadow: 
+            20px 20px 90px 50px var(--blue), 
+            20px -20px 90px 50px var(--accent),
+            -20px -20px 90px 50px var(--yellow),
+            -20px 20px 90px 50px var(--white);
+    }
+
+    65%{
+        box-shadow: 
+            20px 20px 90px 50px var(--white), 
+            -20px -20px 90px 50px var(--blue),
+            -20px -20px 90px 50px var(--accent),
+            -20px 20px 90px 50px var(--yellow);
+    }
+
+    100% {
+        box-shadow: 
+            20px 20px 90px 50px var(--yellow), 
+            20px -20px 90px 50px var(--white),
+            -20px -20px 90px 50px var(--blue),
+            -20px 20px 90px 50px var(--accent);
+    }
+}

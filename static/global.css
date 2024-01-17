@@ -1,5 +1,6 @@
-/*PLUGIN FONTS*/
+@import url('src/lib/components/video/preload.css'); 
 
+/*PLUGIN FONTS*/
 @font-face {
     font-family: "Russo One";
     src: 
@@ -28,6 +29,8 @@
     --black-opac: #0E0E0ECC;
     --dark-gradient: #440000E6;
     --light-gradient: #772C02E6;
+    --yellow: #F1E993;
+    --blue: #327AB8;
 
     --button-background: linear-gradient(to top, var(--dark-gradient) 0%, var(--light-gradient) 100%);
 }

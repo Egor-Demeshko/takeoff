@@ -5,7 +5,21 @@
     import "normalize.css";
 </script>
 
-<div class="background" style="background-image: url(/background.png);">
+<svelte:head>
+    <style>
+        .background {
+            background-image: url(/small-background.png);
+        }
+
+        @media screen and (min-width: 500px) {
+            .background {
+                background-image: url(/background.png);
+            }
+        }
+    </style>
+</svelte:head>
+
+<div class="background">
     <slot></slot>
     <Background/>
     <Topbar_mobile/>
